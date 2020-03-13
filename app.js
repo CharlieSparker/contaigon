@@ -3,7 +3,7 @@
 
 
 window.onload = () => {
-  let view = createWorldView(Game.config.nRows, Game.config.nCols, Game.click, Game.config.settings)
+  let view = createWorldView(Game.config.nRows, Game.config.nCols, Game.click)
   document.body.appendChild(view.panel)
   document.body.appendChild(view.element)
   setInterval(() => {

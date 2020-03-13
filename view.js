@@ -1,4 +1,4 @@
-let createWorldView = (nRows, nCols, onClick, settings) => {
+let createWorldView = (nRows, nCols, onClick) => {
   let cells   = [] // 2d array of cells stored column-first
   let element = document.createElement('div')
   let panel = document.createElement('div')
@@ -19,22 +19,6 @@ let createWorldView = (nRows, nCols, onClick, settings) => {
     }
     cells.push(column)
   }
-
-
-
-  for (let key in settings) {
-    let row = ['<',`${settings[key]}`,'>']
-    row.forEach((x,y) => {
-      let a=document.createElement('div');
-        a.classList.add('button')
-        a.onclick = () => settings[key] += y-1;
-        a.innerText = x;
-        panel.push(a)
-      });
-    panel.appendChild(row)
-  };
-
-
 
   function update(world) {
     for(let i=0; i<nCols; i++) {
