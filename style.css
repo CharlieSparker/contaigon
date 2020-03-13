@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  margin: 0;
+  align-items: center;
+  font-size: 14pt;
+}
+
+.world {
+  display:           grid;
+  grid-auto-rows:    20px;
+  grid-auto-columns: 20px;
+}
+.button {
+  border: 1px solid lightgrey;
+}
+
+.world .cell {
+  border: 1px solid lightgrey;
+}
+
+.world .cell.out {
+  background-color: darkgrey;
+}
+
+.world .cell.on {
+  background-color: rebeccapurple;
+}
